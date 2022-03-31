@@ -1,0 +1,3 @@
+mediafire ~= 0.6
+urllib3 ~= 1.26
+PyQt5 ~= 5.15
