@@ -1,3 +1,3 @@
-mediafire ~= 0.6
+git+https://github.com/ramajd/mediafire-python-open-sdk.git@master#egg=mediafire
 urllib3 ~= 1.26
 PyQt5 ~= 5.15
