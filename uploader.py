@@ -112,11 +112,15 @@ class UploaderApp(QWidget):
             upload_path = self.txtUploadUrl.text()
             print('> upload new file: {}'.format(upload_path))
             with open(upload_path, 'rb') as fd:
+                print("[-] file opened")
                 upload_result = self.uploader.upload(
                     fd, os.path.basename(upload_path))
+                print("[-] uploaded")
                 details = self.api.file_get_info(upload_result.quickkey)
+                print("[-] info retrived")
                 self.set_result('success', pprint.pformat(
                     details, indent=2))
+                print("[-] done")
         except Exception as err:
             print('> upload failed: {}'.format(str(err)))
             self.set_result('error', str(err))
